@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virajas Joshi — Embedded Systems & Application Engineer @ Renesas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+<body>
+
+<!-- ═══ PCB CIRCUIT BACKGROUND ═══ -->
+<canvas id="bg-pcb"></canvas>
+<!-- ═══ CODE RAIN BACKGROUND ═══ -->
+<canvas id="bg-code"></canvas>
+
+<!-- ═══ NAV ═══ -->
+<nav id="navbar">
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#personal">Profile</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <!-- <li><a href="#services">Services</a></li> -->
+    <li><a href="#activities">Activities</a></li>
+    <li><a href="#interests">Interests</a></li>
+  </ul>
+  <div class="nav-burger" id="burger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMenu()">Home</a>
+  <a href="#personal" onclick="closeMenu()">Profile</a>
+  <a href="#education" onclick="closeMenu()">Education</a>
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#skills" onclick="closeMenu()">Skills</a>
+  <a href="#projects" onclick="closeMenu()">Projects</a>
+  <a href="#achievements" onclick="closeMenu()">Achievements</a>
+  <!-- <a href="#services" onclick="closeMenu()">Services</a> -->
+  <a href="#activities" onclick="closeMenu()">Activities</a>
+  <a href="#interests" onclick="closeMenu()">Interests</a>
+</div>
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════════ -->
+<div id="home" style="position:relative;z-index:1">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-label">Electronics &amp; Embedded Systems Engineer</div>
+      <h1 class="hero-name">Virajas<br>Joshi</h1>
+      <p class="hero-desc">
+       Embedded Engineer at Renesas Electronics with hands-on experience in MCU-based application and low-level driver development. Proven ability to design and develop efficient firmware, proof-of-concept systems, and customer-centric embedded solutions across diverse platforms. Skilled in translating requirements into optimized, real-time implementations, with a strong focus on performance, reliability, and scalability. Proactive and collaborative team player, driven to contribute effectively to team success and deliver high-impact embedded solutions. 
+      </p>
+      <div class="hero-btns">
+        <!-- <a href="#" class="btn-primary">⬇ Download Resume</a> -->
+        <a href="#personal" class="btn-outline">Contact Me →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><div class="stat-num">36+</div><div class="stat-label">Projects</div></div>
+        <div class="stat-item"><div class="stat-num">3+</div><div class="stat-label">Years Exp</div></div>
+        <div class="stat-item"><div class="stat-num">2×</div><div class="stat-label">AIR Robocon</div></div>
+        <!-- <div class="stat-item"><div class="stat-num">10+</div><div class="stat-label">Protocols</div></div> -->
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-frame">
+        <img src="assets/images/photo.jpeg" alt="Virajas Joshi">
+        <div class="hero-photo-corner tl"></div><div class="hero-photo-corner tr"></div>
+        <div class="hero-photo-corner bl"></div><div class="hero-photo-corner br"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ PERSONAL / CONTACT ═══════════════ -->
+<div class="sec-sep"><div class="sep-line"></div><div class="sep-diamond"></div><div class="sep-line"></div></div>
+<section id="personal" class="reveal">
+  <div class="sec-header">
+    <div class="sec-tag">01 — Profile</div>
+    <h2 class="sec-title">Personal <span>Details</span> &amp; Contact</h2>
+    <div class="sec-line"><div class="sec-line-dot"></div></div>
+  </div>
+  <div class="grid-2" style="gap:2rem">
+    <div>
+      <div class="card" style="margin-bottom:1.4rem">
+        <h3 style="font-family:var(--font-display);font-size:.95rem;color:var(--electric);margin-bottom:1.2rem;letter-spacing:1px">PERSONAL INFORMATION</h3>
+        <div class="info-item"><div class="info-icon">👤</div><div><div class="info-label">Full Name</div><div class="info-val">Virajas Vikas Joshi</div></div></div>
+        <div class="info-item"><div class="info-icon">💼</div><div><div class="info-label">Current Role</div><div class="info-val">Associate Application Engineer — Renesas Electronics India</div></div></div>
+        <div class="info-item"><div class="info-icon">🎓</div><div><div class="info-label">Degree</div><div class="info-val">B.Tech — Electronics &amp; Telecommunication Engineering</div></div></div>
+        <div class="info-item"><div class="info-icon">🌐</div><div><div class="info-label">Languages</div><div class="info-val">English · Hindi · Marathi</div></div></div>
+      </div>
+    </div>
+    <div>
+      <!-- <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+        <h3 style="font-family:var(--font-display);font-size:.95rem;color:var(--electric);letter-spacing:1px;margin-bottom:.5rem">CONNECT FOR REQUIREMENTS</h3>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" name="firstName" placeholder="First Name" required></div>
+          <div class="form-group"><label>Last Name</label><input type="text" name="lastName" placeholder="Last Name" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="Email Address" required></div>
+          <div class="form-group"><label>Subject</label><input type="text" name="subject" placeholder="Subject"></div>
+        </div>
+        <div class="form-group"><label>Message</label><textarea name="message" placeholder="Message" required></textarea></div>
+        <button type="submit" class="btn-primary" style="align-self:flex-start">Send Message →</button>
+        <div id="formStatus" style="font-family:var(--font-mono);font-size:.75rem;color:var(--cyan);display:none;margin-top:.5rem"></div>
+      </form> -->
+      <div class="card" style="margin-bottom:1.4rem">
+        <h3 style="font-family:var(--font-display);font-size:.95rem;color:var(--electric);margin-bottom:1.2rem;letter-spacing:1px">CONNECT FOR REQUIREMENTS</h3>
+        <div class="info-item"><div class="info-icon">📧</div><div><div class="info-label">Email</div><div class="info-val"><a href="mailto:virajasvjoshi18@gmail.com" style="color:var(--white);text-decoration:none" onmouseover="this.style.color='var(--electric)'" onmouseout="this.style.color='var(--white)'">virajasvjoshi18@gmail.com</a></div></div></div>
+        <div class="info-item"><div class="info-icon">📱</div><div><div class="info-label">Phone</div><div class="info-val"><a href="tel:+919359215709" style="color:var(--white);text-decoration:none" onmouseover="this.style.color='var(--electric)'" onmouseout="this.style.color='var(--white)'">+91 93592 15709</a></div></div></div>
+        <div class="info-item"><div class="info-icon">💼</div><div><div class="info-label">LinkedIn</div><div class="info-val"><a href="https://www.linkedin.com/in/virajas-joshi" target="_blank" rel="noopener" style="color:var(--white);text-decoration:none" onmouseover="this.style.color='var(--electric)'" onmouseout="this.style.color='var(--white)'">linkedin.com/in/virajas-joshi</a></div></div></div>
+        <div class="info-item"><div class="info-icon">🐙</div><div><div class="info-label">GitHub</div><div class="info-val"><a href="https://github.com/Virajasjoshi" target="_blank" rel="noopener" style="color:var(--white);text-decoration:none" onmouseover="this.style.color='var(--electric)'" onmouseout="this.style.color='var(--white)'">github.com/Virajasjoshi</a></div></div></div>
+        <!-- <div class="info-item"><div class="info-icon">📸</div><div><div class="info-label">Instagram</div><div class="info-val"><a href="https://instagram.com/virajas._.j" target="_blank" rel="noopener" style="color:var(--white);text-decoration:none" onmouseover="this.style.color='var(--electric)'" onmouseout="this.style.color='var(--white)'">@virajas._.j</a></div></div></div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ EDUCATION ═══════════════ -->
+<div class="sec-sep"><div class="sep-line"></div><div class="sep-diamond"></div><div class="sep-line"></div></div>
+<section id="education" class="reveal">
+  <div class="sec-header">
+    <div class="sec-tag">02 — Education</div>
+    <h2 class="sec-title">Academic <span>Background</span></h2>
+    <div class="sec-line"><div class="sec-line-dot"></div></div>
+  </div>
+  <div class="timeline">
+    <div class="t-item blue">
+      <div class="t-card">
+        <div class="t-year">2020 — 2024</div>
+        <div class="t-title">B.Tech — Electronics &amp; Telecommunication Engineering</div>
+        <div class="t-sub">Pimpri Chinchwad College of Engineering (PCCOE), Nigadi, Pune · Savitribai Phule Pune University</div>
+        <p style="font-size:.86rem;color:var(--silver);margin-top:.7rem;line-height:1.7">Specialized in embedded systems, digital electronics, and VLSI Systems. Actively led the Automatons Robotics Team as Electronics Head and secured top ranks in national-level ABU Robocon competitions.</p>
+
+        <div style="margin-top:1.2rem">
+          <div style="font-family:var(--font-display);font-size:.82rem;font-weight:700;color:var(--electric);margin-bottom:.6rem">
+            🏆 Academic &amp; Extracurricular Achievements
+          </div>
+          <ul style="font-size:.82rem;color:var(--silver);line-height:1.8;padding-left:0;list-style:none">
+            <li style="margin-bottom:.25rem;display:flex;gap:.5rem"><span style="color:var(--electric);flex-shrink:0">▸</span>Member of the Robotics Group, leading the Electronics Team; secured All India Rank (AIR) 2 and 3 in competitions.</li>
+            <li style="margin-bottom:.25rem;display:flex;gap:.5rem"><span style="color:var(--electric);flex-shrink:0">▸</span>Part of the PCCOE Cricket Team.</li>
+            <li style="margin-bottom:.25rem;display:flex;gap:.5rem"><span style="color:var(--electric);flex-shrink:0">▸</span>Contributed to the organization of sports events at PCCOE.</li>
+            <li style="margin-bottom:.25rem;display:flex;gap:.5rem"><span style="color:var(--electric);flex-shrink:0">▸</span>Technical Member of the PCCOE CSI Student Chapter.</li>
+            <li style="margin-bottom:.25rem;display:flex;gap:.5rem"><span style="color:var(--electric);flex-shrink:0">▸</span>Technical Member of the PCCOE TEDx Student Chapter.</li>
+            <li style="margin-bottom:.25rem;display:flex;gap:.5rem"><span style="color:var(--electric);flex-shrink:0">▸</span>Winner of the Web Explore Hackathon.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="t-item violet">
+      <div class="t-card">
+        <div class="t-year">2018 — 2021</div>
+        <div class="t-title">Diploma — Electronics &amp; Telecommunication Engineering</div>
+        <div class="t-sub">Government Polytechnic, Nashik, Maharashtra</div>
+        <span class="t-badge">🏅 Dept. Rank 1 — 2018–2021</span>
+        <p style="font-size:.86rem;color:var(--silver);margin-top:.7rem;line-height:1.7">Graduated with top rank in the Electronics department. Gained foundational expertise in analog/digital circuits, microcontroller programming, and PCB fabrication.</p>
+
+        <div style="margin-top:1.2rem">
+          <div style="font-family:var(--font-display);font-size:.82rem;font-weight:700;color:var(--electric);margin-bottom:.6rem;display:flex;align-items:center;gap:8px">
+            🏆 Academic &amp; Extracurricular Achievements
+          </div>
+          <ul style="font-size:.82rem;color:var(--silver);line-height:1.8;padding-left:1.1rem;list-style:none">
+            <li style="margin-bottom:.25rem;display:flex;gap:.5rem"><span style="color:var(--electric);flex-shrink:0">▸</span>Member of the Government Polytechnic Cricket Team.</li>
+            <li style="margin-bottom:.25rem;display:flex;gap:.5rem"><span style="color:var(--electric);flex-shrink:0">▸</span>Active member of the E&amp;TC Technical Project Group.</li>
+            <li style="margin-bottom:.25rem;display:flex;gap:.5rem"><span style="color:var(--electric);flex-shrink:0">▸</span>Led the Student-to-Teacher Community as Head Coordinator.</li>
+            <li style="margin-bottom:.25rem;display:flex;gap:.5rem"><span style="color:var(--electric);flex-shrink:0">▸</span>Successfully completed 2 Mini Projects and 1 Major Project.</li>
+            <li style="margin-bottom:.25rem;display:flex;gap:.5rem"><span style="color:var(--electric);flex-shrink:0">▸</span>Member of the E&amp;TC Event Management Team.</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:1rem">
+          <div style="font-family:var(--font-display);font-size:.82rem;font-weight:700;color:var(--electric);margin-bottom:.6rem">
+            📚 Core Academic Coursework
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:.45rem">
+            <span style="font-family:var(--font-mono);font-size:.65rem;padding:3px 10px;border-radius:4px;background:rgba(0,212,255,.07);border:1px solid rgba(0,212,255,.18);color:var(--electric)">VHDL (VLSI) Programming &amp; Simulation</span>
+            <span style="font-family:var(--font-mono);font-size:.65rem;padding:3px 10px;border-radius:4px;background:rgba(0,212,255,.07);border:1px solid rgba(0,212,255,.18);color:var(--electric)">8051 Microcontroller Programming</span>
+            <span style="font-family:var(--font-mono);font-size:.65rem;padding:3px 10px;border-radius:4px;background:rgba(0,212,255,.07);border:1px solid rgba(0,212,255,.18);color:var(--electric)">C Programming Language</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="t-item blue">
+      <div class="t-card">
+        <div class="t-year">Until 2018</div>
+        <div class="t-title">SSC — Secondary School Certificate</div>
+        <div class="t-sub">G.S. High School, Amalner, Jalgaon, Maharashtra · Maharashtra State Board</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ EXPERIENCE ═══════════════ -->
+<div class="sec-sep"><div class="sep-line"></div><div class="sep-diamond"></div><div class="sep-line"></div></div>
+<section id="experience" class="reveal">
+  <div class="sec-header">
+    <div class="sec-tag">03 — Experience</div>
+    <h2 class="sec-title">Work <span>Experience</span></h2>
+    <div class="sec-line"><div class="sec-line-dot"></div></div>
+  </div>
+  <div class="timeline">
+
+    <div class="t-item blue">
+      <div class="exp-card">
+        <div class="exp-hdr">
+          <div class="exp-role">Associate Application Engineer</div>
+          <div class="exp-period">Aug 2024 — Present</div>
+        </div>
+        <div class="exp-company">Renesas Electronics India Pvt. Ltd. — Bengaluru, Karnataka</div>
+        <div class="exp-desc">
+          <ul>
+            <li>Architected and delivered end-to-end IoT proof-of-concept systems using the <strong>DA16200 Wi-Fi SoC</strong> with AT-command firmware over UART, implementing MQTT-based wireless control for smart appliances via mobile applications.</li>
+            <li>Developed a <strong>BLE Smart Air Freshener PoC</strong> using the <strong>DA14531</strong> ultra-low-power BLE SoC — defined custom GATT profiles with UUIDs for device-specific services and characteristics, paired with an Android application for seamless wireless control.</li>
+            <li>Designed the application layer and navigation firmware for a <strong>Vacuum Cleaning Robot PoC</strong> — implemented DC motor control using ABZ encoders over I2C via the <strong>Renesas hvPAK Motor Control IC</strong>, and developed a wireless navigation control subsystem.</li>
+            <li>Engineered a <strong>BLDC Cycling Fan</strong> system using <strong>GreenPAK programmable IC</strong> in conjunction with the <strong>Renesas RL78 MCU</strong>, establishing I2C communication between GreenPAK and RL78 for configurable commutation control.</li>
+            <li>Developed and validated an <strong>Auxiliary MCU firmware module</strong> for an X-in-1 integrated system — responsible for CAN and UART protocol drivers, multi-system coordination logic, and motor testing using EMU and ABZ encoder feedback.</li>
+            <li>Performed system validation and regression testing of the <strong>Renesas Flexible Software Package (FSP)</strong> for <strong>RH850 automotive-grade MCUs</strong> — covering interrupt logic, motor speed control loops, and RTOS task integration in compliance with <strong>ISO 26262 functional safety</strong> requirements.</li>
+            <li>Led internal customer enablement: delivered <strong>FAE training, distributor workshops, and sales technical training</strong> on Renesas RL78, RH850, RA, and RZ device families.</li>
+            <li>Created <strong>winning combination reference designs</strong> and cross-reference solution guides to accelerate customer design-in cycles and contributed directly to business revenue growth.</li>
+            <li>Developed <strong>TPMS (Tire Pressure Monitoring System)</strong> PoC using DA14531 BLE sensor nodes transmitting pressure/temperature data to a cluster display unit.</li>
+            <li>Provided <strong>MATLAB/Simulink model-based design support</strong> for Renesas MCU-targeted code generation workflows.</li>
+          </ul>
+        </div>
+        <div class="tags">
+          <span class="tag">DA16200</span><span class="tag">DA14531 BLE</span><span class="tag">RL78</span><span class="tag">RH850</span>
+          <span class="tag">RA (ARM)</span><span class="tag">RZ MPU</span><span class="tag">MQTT</span><span class="tag">RTOS</span>
+          <span class="tag">CAN / UART</span><span class="tag">FSP</span><span class="tag v">ISO 26262</span><span class="tag">MATLAB</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="t-item violet">
+      <div class="exp-card">
+        <div class="exp-hdr">
+          <div class="exp-role">Embedded Systems Intern → Application Engineer Intern</div>
+          <div class="exp-period">Feb 2024 — Aug 2024</div>
+        </div>
+        <div class="exp-company">Renesas Electronics India Pvt. Ltd. — Bengaluru, Karnataka</div>
+        <div class="exp-desc">
+          <ul>
+            <li>Onboarded onto Renesas MCU ecosystem — gained working expertise on RL78 low-power MCUs and RA family ARM Cortex-M devices using e² studio IDE and FSP middleware.</li>
+            <li>Executed initial IoT and BLE proof-of-concept builds using Dialog Semiconductor SoCs (DA16200, DA14531), establishing baseline firmware architectures adopted in production PoCs.</li>
+            <li>Contributed to motor control and cluster screen mirroring projects using <strong>Renesas RQ61051</strong>.</li>
+            <li>Supported customer FAE activities with technical documentation, demo setup, and troubleshooting for Renesas microcontroller evaluation boards.</li>
+          </ul>
+        </div>
+        <div class="tags">
+          <span class="tag">RL78</span><span class="tag">DA14531</span><span class="tag">DA16200</span>
+          <span class="tag">e² studio</span><span class="tag">FSP</span><span class="tag">Motor Control</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="t-item blue">
+      <div class="exp-card">
+        <div class="exp-hdr">
+          <div class="exp-role">R&amp;D EV Embedded Intern</div>
+          <div class="exp-period">2023 — Feb 2024</div>
+        </div>
+        <div class="exp-company">Kinetic Communication Ltd. (Kinetic Green) — Pune, Maharashtra</div>
+        <div class="exp-desc">
+          <ul>
+            <li>Worked in the R&amp;D division on electric vehicle embedded systems, contributing to firmware development for EV subsystems including battery monitoring, motor control, and CAN communication between ECUs.</li>
+            <li>Gained hands-on experience with automotive embedded architectures and real-world EV powertrain integration challenges.</li>
+          </ul>
+        </div>
+        <div class="tags">
+          <span class="tag">EV Systems</span><span class="tag">CAN Bus</span><span class="tag">Battery Mgmt</span><span class="tag">Embedded C</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="t-item violet">
+      <div class="exp-card">
+        <div class="exp-hdr">
+          <div class="exp-role">Electronics Head — Team Automatons Robotics</div>
+          <div class="exp-period">2021 — 2024</div>
+        </div>
+        <div class="exp-company">PCCOE Automatons Robotics Team — Pune, Maharashtra</div>
+        <div class="exp-desc">
+          <ul>
+            <li>Led full electronics design and firmware development for ABU Robocon competition robots over three years — achieved All India Rank 2 (2024) and All India Rank 3 (2022).</li>
+            <li>Designed multi-layer PCBs, implemented real-time motor control with encoder feedback, and built wireless communication stacks for autonomous and tele-operated robot modes.</li>
+            <li>Mentored and upskilled a team of junior electronics engineers in embedded systems, PCB design, and competition strategies.</li>
+          </ul>
+        </div>
+        <div class="tags">
+          <span class="tag">STM32</span><span class="tag">Motor Control</span><span class="tag">Wireless Comm</span>
+          <span class="tag">PCB Design</span><span class="tag">Team Lead</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ SKILLS ═══════════════ -->
+<div class="sec-sep"><div class="sep-line"></div><div class="sep-diamond"></div><div class="sep-line"></div></div>
+<section id="skills" class="reveal">
+  <div class="sec-header">
+    <div class="sec-tag">04 — Skills &amp; Certifications</div>
+    <h2 class="sec-title">Technical <span>Skills</span> &amp; Expertise</h2>
+    <div class="sec-line"><div class="sec-line-dot"></div></div>
+  </div>
+  <div class="grid-2" style="gap:3rem;align-items:start">
+    <div>
+      <div class="skill-cat">⚙️ Embedded Firmware &amp; RTOS</div>
+      <div class="chips">
+        <span class="chip h">Embedded C</span><span class="chip h">C++</span><span class="chip h">FreeRTOS</span>
+        <span class="chip h">Bare-Metal Programming</span><span class="chip">Bootloader Dev</span>
+        <span class="chip">DMA / Interrupts / ISR</span><span class="chip">HAL / LL Drivers</span>
+        <span class="chip">FSP (Flexible Software Package)</span><span class="chip">OTA Firmware Update</span>
+      </div>
+
+      <div class="skill-cat">🔌 Communication Protocols</div>
+      <div class="chips">
+        <span class="chip h">I2C</span><span class="chip h">SPI</span><span class="chip h">UART / USART</span>
+        <span class="chip h">CAN Bus</span><span class="chip">Modbus RTU</span><span class="chip">LIN</span>
+        <span class="chip h">MQTT</span><span class="chip">BLE (Custom GATT Profile)</span>
+        <span class="chip">Wi-Fi (AT Commands)</span>
+      </div>
+
+      <div class="skill-cat">🧩 MCU Platforms</div>
+      <div class="chips">
+        <span class="chip">STM32 (ARM Cortex-M)</span><span class="chip">ESP32</span><span class="chip">Arduino / AVR</span>
+        <span class="chip h">Renesas MCU's &amp; MPU's</span>
+        <span class="chip v">Renesas Wireless Devices</span>
+      </div>
+
+      <div class="skill-cat">🔧 Hardware &amp; Tools</div>
+      <div class="chips">
+        <span class="chip">JTAG / SWD Debugging</span><span class="chip">GDB / J-Link</span>
+        <span class="chip">Oscilloscope / Logic Analyzer</span><span class="chip">PCB Design (Altium)</span>
+        <span class="chip">MATLAB / Simulink</span><span class="chip">Git / GitHub</span>
+        <span class="chip">AWS IoT</span><span class="chip">Linux Shell Scripting</span>
+      </div>
+    </div>
+
+    <div>
+      <!-- <div class="skill-cat">📊 Proficiency Levels</div>
+      <div id="skill-bars-section" style="margin-bottom:2.5rem">
+        <div class="sbar"><div class="sbar-hdr"><span class="sbar-name">Embedded C / Firmware Dev</span><span class="sbar-pct">92%</span></div><div class="sbar-track"><div class="sbar-fill" data-width="92"></div></div></div>
+        <div class="sbar"><div class="sbar-hdr"><span class="sbar-name">BLE &amp; Wi-Fi (Dialog Semi)</span><span class="sbar-pct">85%</span></div><div class="sbar-track"><div class="sbar-fill" data-width="85"></div></div></div>
+        <div class="sbar"><div class="sbar-hdr"><span class="sbar-name">Renesas MCU Ecosystem (RL78/RH850/RA)</span><span class="sbar-pct">88%</span></div><div class="sbar-track"><div class="sbar-fill" data-width="88"></div></div></div>
+        <div class="sbar"><div class="sbar-hdr"><span class="sbar-name">MQTT / IoT Protocols</span><span class="sbar-pct">82%</span></div><div class="sbar-track"><div class="sbar-fill" data-width="82"></div></div></div>
+        <div class="sbar"><div class="sbar-hdr"><span class="sbar-name">Motor Control (DC / BLDC)</span><span class="sbar-pct">80%</span></div><div class="sbar-track"><div class="sbar-fill" data-width="80"></div></div></div>
+        <div class="sbar"><div class="sbar-hdr"><span class="sbar-name">CAN Bus / Automotive Protocols</span><span class="sbar-pct">78%</span></div><div class="sbar-track"><div class="sbar-fill" data-width="78"></div></div></div>
+        <div class="sbar"><div class="sbar-hdr"><span class="sbar-name">PCB Design / Hardware Debug</span><span class="sbar-pct">75%</span></div><div class="sbar-track"><div class="sbar-fill" data-width="75"></div></div></div>
+        <div class="sbar"><div class="sbar-hdr"><span class="sbar-name">MATLAB / Simulink (Model-Based)</span><span class="sbar-pct">68%</span></div><div class="sbar-track"><div class="sbar-fill" data-width="68"></div></div></div>
+      </div> -->
+
+      <div class="skill-cat">🏅 Certifications</div>
+      <div class="cert-card"><div class="cert-badge">⚡</div><div><div class="cert-name">Verification Series Part 1: SystemVerilog Essentials</div><div class="cert-issuer">Udemy · 2023</div></div></div>
+      <div class="cert-card"><div class="cert-badge">🌐</div><div><div class="cert-name">IoT &amp; Embedded Systems Professional</div><div class="cert-issuer">NPTEL — IIT Bombay · 2022</div></div></div>
+      <div class="cert-card"><div class="cert-badge">🎓</div><div><div class="cert-name">Embedded Systems with ARM Cortex-M</div><div class="cert-issuer">Udemy · 2022</div></div></div>
+      <div class="cert-card"><div class="cert-badge">📡</div><div><div class="cert-name">FreeRTOS From Ground Up on ARM</div><div class="cert-issuer">Udemy · 2024</div></div></div>
+      <div class="cert-card"><div class="cert-badge">🔧</div><div><div class="cert-name">PCB Design with KiCad — Professional</div><div class="cert-issuer">Udemy · 2023</div></div></div>
+      <div class="cert-card"><div class="cert-badge">🌐</div><div><div class="cert-name">Starting with Altium Designer</div><div class="cert-issuer">Udemy · 2021</div></div></div>
+      <div class="cert-card"><div class="cert-badge">⚡</div><div><div class="cert-name">The Complete Full-Stack Web Development Bootcamp</div><div class="cert-issuer">Udemy · 2020</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PROJECTS ═══════════════ -->
+<div class="sec-sep"><div class="sep-line"></div><div class="sep-diamond"></div><div class="sep-line"></div></div>
+<section id="projects" class="reveal">
+  <div class="sec-header">
+    <div class="sec-tag">05 — Projects</div>
+    <h2 class="sec-title">Featured <span>Projects</span></h2>
+    <div class="sec-line"><div class="sec-line-dot"></div></div>
+  </div>
+  <div class="grid-3">
+    <div class="proj-card">
+      <div class="proj-img">📡</div>
+      <div class="proj-body">
+        <div class="proj-name">IoT Heater Control — DA16200 Wi-Fi</div>
+        <div class="proj-desc">End-to-end IoT system for wireless heater control using the DA16200 Wi-Fi SoC. Implemented AT-command firmware over UART, MQTT broker integration, and mobile app control with real-time state feedback.</div>
+        <div class="stacks"><span class="sc">DA16200</span><span class="sc">UART AT-CMD</span><span class="sc">MQTT</span><span class="sc">Embedded C</span><span class="sc">Android App</span></div>
+        <div class="proj-links"><a href="#" class="plink">⟶ GitHub</a></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-img">💨</div>
+      <div class="proj-body">
+        <div class="proj-name">BLE Smart Air Freshener — DA14531</div>
+        <div class="proj-desc">PoC BLE-controlled air freshener using Dialog DA14531 ultra-low-power SoC. Defined custom GATT profile with service and characteristic UUIDs. Paired with Android app for spray interval, intensity, and schedule control.</div>
+        <div class="stacks"><span class="sc">DA14531</span><span class="sc">BLE 5.1</span><span class="sc">Custom GATT</span><span class="sc">Android</span><span class="sc">Low Power</span></div>
+        <div class="proj-links"><a href="#" class="plink">⟶ GitHub</a></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-img">🤖</div>
+      <div class="proj-body">
+        <div class="proj-name">Smart Vacuum Cleaning Robot</div>
+        <div class="proj-desc">Application-layer firmware for an autonomous vacuum robot. Implemented navigation algorithm, DC motor control with ABZ encoder feedback over I2C using Renesas hvPAK, and wireless navigation control via BLE.</div>
+        <div class="stacks"><span class="sc">Renesas hvPAK</span><span class="sc">I2C</span><span class="sc">ABZ Encoder</span><span class="sc">BLE Nav</span><span class="sc">Embedded C</span></div>
+        <div class="proj-links"><a href="#" class="plink">⟶ GitHub</a></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-img">🌬️</div>
+      <div class="proj-body">
+        <div class="proj-name">BLDC Cycling Fan — GreenPAK + RL78</div>
+        <div class="proj-desc">Brushless DC fan control system using GreenPAK configurable mixed-signal IC for commutation logic, interfaced via I2C with a Renesas RL78 MCU. Speed and mode control implemented through configurable GreenPAK registers.</div>
+        <div class="stacks"><span class="sc">GreenPAK</span><span class="sc">RL78</span><span class="sc">BLDC</span><span class="sc">I2C</span><span class="sc">Motor Control</span></div>
+        <div class="proj-links"><a href="#" class="plink">⟶ Demo</a></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-img">🚗</div>
+      <div class="proj-body">
+        <div class="proj-name">TPMS — BLE Sensor to Cluster</div>
+        <div class="proj-desc">Tire Pressure Monitoring System using DA14531 BLE sensor nodes. Each sensor node reads pressure and temperature data and transmits wirelessly to a central cluster display unit with alert thresholds.</div>
+        <div class="stacks"><span class="sc">DA14531</span><span class="sc">BLE</span><span class="sc">TPMS</span><span class="sc">Automotive</span><span class="sc">Sensor Hub</span></div>
+        <div class="proj-links"><a href="#" class="plink">⟶ GitHub</a></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-img">🤼</div>
+      <div class="proj-body">
+        <div class="proj-name">ABU Robocon Competition Robots</div>
+        <div class="proj-desc">Multi-year development of ABU Robocon India competition robots as Electronics Head. Designed PCBs, wrote real-time motor control and wireless navigation firmware. Achieved AIR 2 (2024) and AIR 3 (2022) nationally.</div>
+        <div class="stacks"><span class="sc">STM32</span><span class="sc">Motor PID</span><span class="sc">PCB Design</span><span class="sc">RF Comm</span><span class="sc">FreeRTOS</span></div>
+        <div class="proj-links"><a href="#" class="plink">⟶ GitHub</a><a href="#" class="plink">⟶ Video</a></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-img">🔧</div>
+      <div class="proj-body">
+        <div class="proj-name">Aux MCU Firmware — X-in-1 System</div>
+        <div class="proj-desc">Designed and implemented auxiliary MCU firmware for a multi-function X-in-1 integrated system. Responsible for CAN/UART drivers, inter-subsystem coordination, and motor performance validation using EMU and ABZ encoder feedback.</div>
+        <div class="stacks"><span class="sc">CAN Bus</span><span class="sc">UART</span><span class="sc">EMU Encoder</span><span class="sc">ABZ Encoder</span><span class="sc">Embedded C</span></div>
+        <div class="proj-links"><a href="#" class="plink">⟶ GitHub</a></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-img">🦾</div>
+      <div class="proj-body">
+        <div class="proj-name">Omni / Quadruped Robotic Platforms</div>
+        <div class="proj-desc">Designed and built 3-wheel omni, 4-wheel differential drive, and quadruped robots from ground up — including mechanical frame, electronics design, custom PCBs, and embedded firmware. Used for competition and research.</div>
+        <div class="stacks"><span class="sc">Omni Drive</span><span class="sc">Quadruped</span><span class="sc">PCB Design</span><span class="sc">Inverse Kinematics</span><span class="sc">Servo</span></div>
+        <div class="proj-links"><a href="#" class="plink">⟶ GitHub</a></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-img">📊</div>
+      <div class="proj-body">
+        <div class="proj-name">RH850 FSP Validation Suite</div>
+        <div class="proj-desc">Systematic validation of Renesas Flexible Software Package (FSP) for RH850 automotive MCU. Tested peripheral drivers, motor control loops, interrupt latency, and RTOS integration against ISO 26262 safety benchmarks.</div>
+        <div class="stacks"><span class="sc">RH850</span><span class="sc">FSP</span><span class="sc">ISO 26262</span><span class="sc">RTOS</span><span class="sc">MATLAB</span></div>
+        <div class="proj-links"><a href="#" class="plink">⟶ Docs</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ACHIEVEMENTS ═══════════════ -->
+<div class="sec-sep"><div class="sep-line"></div><div class="sep-diamond"></div><div class="sep-line"></div></div>
+<section id="achievements" class="reveal">
+  <div class="sec-header">
+    <div class="sec-tag">06 — Achievements</div>
+    <h2 class="sec-title">Awards &amp; <span>Recognition</span></h2>
+    <div class="sec-line"><div class="sec-line-dot"></div></div>
+  </div>
+
+  <div class="ach-card">
+    <div class="ach-icon" style="background:rgba(255,215,0,.12);border:1px solid rgba(255,215,0,.25)">🥇</div>
+    <div>
+      <div class="ach-title">All India Rank 2 — ABU DD Robocon 2024</div>
+      <div class="ach-desc">Led the PCCOE Automatons electronics team to a national 2nd-place finish at the prestigious ABU Robocon India competition. Responsible for full electronics architecture — motor controllers, wireless communication stack, and real-time sensor integration for the competition robot.</div>
+      <div class="ach-year">// 2024 · ABU Robocon India · Electronics Team Lead</div>
+    </div>
+  </div>
+
+  <div class="ach-card">
+    <div class="ach-icon" style="background:rgba(192,192,192,.12);border:1px solid rgba(192,192,192,.25)">🥉</div>
+    <div>
+      <div class="ach-title">All India Rank 3 — ABU DD Robocon 2022</div>
+      <div class="ach-desc">Contributed as Junior Electronics Engineer to the Automatons team, achieving a national top-3 finish. Developed motor control firmware and sensor interfacing modules for the autonomous robot system.</div>
+      <div class="ach-year">// 2022 · ABU Robocon India · Junior Electronics Engineer</div>
+    </div>
+  </div>
+
+  <div class="ach-card">
+    <div class="ach-icon" style="background:rgba(0,212,255,.12);border:1px solid rgba(0,212,255,.25)">🏆</div>
+    <div>
+      <div class="ach-title">Rank 1 — WebExplore Hackathon, Newton School Coding Club</div>
+      <div class="ach-desc">Secured first place in the WebExplore Hackathon organized by the Newton School Coding Club at PCCOE, demonstrating rapid prototyping and full-stack development skills under time constraints.</div>
+      <div class="ach-year">// PCCOE, Pune · Newton School Coding Club</div>
+    </div>
+  </div>
+
+  <div class="ach-card">
+    <div class="ach-icon" style="background:rgba(166,120,217,.12);border:1px solid rgba(166,120,217,.25)">🎖️</div>
+    <div>
+      <div class="ach-title">Department Rank 1 — Government Polytechnic Nashik</div>
+      <div class="ach-desc">Consistently held the top academic rank in the Electronics &amp; Telecommunication department throughout the diploma program, demonstrating strong command of core engineering fundamentals.</div>
+      <div class="ach-year">// 2018–2021 · Government Polytechnic, Nashik</div>
+    </div>
+  </div>
+
+  <div class="ach-card">
+    <div class="ach-icon" style="background:rgba(0,255,204,.1);border:1px solid rgba(0,255,204,.2)">💻</div>
+    <div>
+      <div class="ach-title">Google Summer of Code (GSoC) 2023 — Contributor</div>
+      <div class="ach-desc">Selected as a contributor for Google Summer of Code 2023, working on open-source embedded/software projects under a mentored program. One of the most competitive global open-source programs with a ~5% acceptance rate.</div>
+      <div class="ach-year">// 2023 · Google Summer of Code</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SERVICES ═══════════════ -->
+<!-- <div class="sec-sep"><div class="sep-line"></div><div class="sep-diamond"></div><div class="sep-line"></div></div>
+<section id="services" class="reveal">
+  <div class="sec-header">
+    <div class="sec-tag">08 — Services</div>
+    <h2 class="sec-title">What I <span>Offer</span></h2>
+    <div class="sec-line"><div class="sec-line-dot"></div></div>
+  </div>
+  <div class="grid-3">
+    <div class="svc-card"><span class="svc-icon">⚙️</span><div class="svc-name">Embedded Firmware Development</div><div class="svc-desc">End-to-end firmware development on Renesas (RL78, RH850, RA, RZ), STM32, and ESP32 platforms. Bare-metal, HAL, and RTOS-based architectures tailored to your product requirements.</div></div>
+    <div class="svc-card"><span class="svc-icon">📡</span><div class="svc-name">BLE &amp; Wi-Fi IoT Solutions</div><div class="svc-desc">Custom BLE GATT profile development using Dialog DA14531/DA16200. MQTT-based IoT system design with cloud (AWS) integration and mobile app pairing for smart products.</div></div>
+    <div class="svc-card"><span class="svc-icon">🤖</span><div class="svc-name">Robotics &amp; Motor Control</div><div class="svc-desc">Full robotics platform development — omni, differential, and quadruped robots. DC/BLDC motor control with encoder feedback (PID), navigation algorithms, and wireless teleoperation.</div></div>
+    <div class="svc-card"><span class="svc-icon">🖥️</span><div class="svc-name">PCB &amp; Hardware Design</div><div class="svc-desc">Schematic capture and multi-layer PCB layout using KiCad and Altium Designer. From sensor front-ends to full embedded controller boards — DFM-ready, prototype to small-series.</div></div>
+    <div class="svc-card"><span class="svc-icon">🧪</span><div class="svc-name">Embedded Testing &amp; Validation</div><div class="svc-desc">Systematic firmware and hardware validation — FSP regression testing, HIL testing, ISO 26262 functional safety verification, and structured debugging with oscilloscopes and logic analyzers.</div></div>
+    <div class="svc-card"><span class="svc-icon">🌐</span><div class="svc-name">Web Development &amp; Automation</div><div class="svc-desc">Web design, development, and testing for embedded product dashboards and IoT interfaces. Test automation scripting for web and embedded system workflows using Python and shell scripting.</div></div>
+  </div>
+</section> -->
+
+<!-- ═══════════════ ACTIVITIES ═══════════════ -->
+<div class="sec-sep"><div class="sep-line"></div><div class="sep-diamond"></div><div class="sep-line"></div></div>
+<section id="activities" class="reveal">
+  <div class="sec-header">
+    <div class="sec-tag">07 — Activities</div>
+    <h2 class="sec-title">Curricular &amp; <span>Extracurricular</span></h2>
+    <div class="sec-line"><div class="sec-line-dot"></div></div>
+  </div>
+  <div class="grid-2" style="gap:1.4rem">
+    <div class="act-card"><span class="act-tag c">Curricular</span>
+      <div class="act-title">Electronics Head — Team Automatons (PCCOE Robotics)</div>
+      <div class="act-desc">Led a cross-functional electronics team of 8+ engineers for four years. Owned circuit design, embedded firmware, motor control systems, and wireless communication for ABU Robocon competition robots. Guided juniors in PCB design and FW architecture.</div>
+    </div>
+    <div class="act-card"><span class="act-tag c">Curricular</span>
+      <div class="act-title">IEEE / PCCOE CSI Student Chapter Member</div>
+      <div class="act-desc">Active member of the PCCOE Computer Society of India student chapter. Participated in technical workshops, coding challenges, and inter-college technical events covering embedded systems and IoT.</div>
+    </div>
+    <div class="act-card"><span class="act-tag c">Curricular</span>
+      <div class="act-title">Google Summer of Code 2023 — Open Source Contributor</div>
+      <div class="act-desc">Contributed to open-source firmware and tooling projects as part of GSoC 2023. Worked on real codebase contributions, peer code reviews, and cross-timezone collaboration with international mentors.</div>
+    </div>
+    <div class="act-card"><span class="act-tag c">Curricular</span>
+      <div class="act-title">TEDx PCCOE — Student Core Team Member</div>
+      <div class="act-desc">Member of the TEDx PCCOE organizing committee. Coordinated logistics, speaker communication, and stage management for the annual TEDx event at PCCOE, Pune.</div>
+    </div>
+    <div class="act-card"><span class="act-tag e">Extra-Curricular</span>
+      <div class="act-title">Divisional Level Cricket — Jain Irrigation, Jalgaon</div>
+      <div class="act-desc">Represented Jain Irrigation at divisional-level cricket matches in 2017–2018. Developed strong teamwork, discipline, and competitive resilience through competitive sports.</div>
+    </div>
+    <div class="act-card"><span class="act-tag e">Extra-Curricular</span>
+      <div class="act-title">Marketing Intern — Unschool</div>
+      <div class="act-desc">Contributed to digital marketing campaigns and student outreach initiatives for Unschool, an online learning platform, developing communication and market awareness skills alongside engineering studies.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ INTERESTS ═══════════════ -->
+<div class="sec-sep"><div class="sep-line"></div><div class="sep-diamond"></div><div class="sep-line"></div></div>
+<section id="interests" class="reveal">
+  <div class="sec-header">
+    <div class="sec-tag">08 — Interests</div>
+    <h2 class="sec-title">Areas of <span>Interest</span></h2>
+    <div class="sec-line"><div class="sec-line-dot"></div></div>
+  </div>
+  <div class="grid-2" style="gap:1.2rem;max-width:700px">
+    <div class="int-card"><div class="int-icon">🚀</div><div><div class="int-name">Space Science &amp; Quantum Computing</div><div class="int-desc">Passionate follower of space exploration, satellite systems, and emerging quantum computing hardware and algorithms.</div></div></div>
+    <div class="int-card"><div class="int-icon">🏅</div><div><div class="int-name">Sports</div><div class="int-desc">Enthusiastic about sports — competitive play builds discipline, teamwork, and a drive for continuous improvement that translates directly into engineering and professional life.</div></div></div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<div class="sec-sep" style="margin-bottom:0"><div class="sep-line"></div><div class="sep-diamond"></div><div class="sep-line"></div></div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/virajas-joshi" target="_blank" rel="noopener" class="soc-link" title="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="https://instagram.com/virajas._.j" target="_blank" rel="noopener" class="soc-link" title="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </a>
+      <a href="mailto:virajasvjoshi18@gmail.com" class="soc-link" title="Gmail">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.908 1.528-1.147C21.69 2.28 24 3.434 24 5.457z"/></svg>
+      </a>
+    </div>
+    <div class="footer-copy">© 2026 Virajas Vikas Joshi All Rights Reserved</div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
